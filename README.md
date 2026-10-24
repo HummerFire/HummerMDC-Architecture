@@ -1,17 +1,27 @@
-# HummerMDC-Architecture
-Orquestador de infraestructura soberana, perimetral y de alta disponibilidad (HA) para el ecosistema Hummerfire.
+
+![HummerMDC_banner](01_Documentacion/img/MDC_2.png)
 
 
-![License](https://img.shields.io/badge/License-GPL--2.0-blue.svg)
-![Proxmox](https://img.shields.io/badge/Proxmox-VE%209-E57000?logo=proxmox&logoColor=white)
-![Talos](https://img.shields.io/badge/Talos-OS-FF7300?logo=linux&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-K8s-326CE5?logo=kubernetes&logoColor=white)
-![OPNsense](https://img.shields.io/badge/OPNsense-26.1.2%20HA-D94F00?logo=opnsense&logoColor=white)
-![HomeAssistant](https://img.shields.io/badge/Home_Assistant-MCP-41BDF5?logo=home-assistant&logoColor=white)
-![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
+![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg?style=flat-square)
+![Proxmox](https://img.shields.io/badge/Proxmox-VE_9-E57000?style=flat-square&logo=proxmox&logoColor=white)
+![Talos](https://img.shields.io/badge/Talos-OS-FF7300?style=flat-square)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-K8s-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Odoo](https://img.shields.io/badge/Odoo-ERP-714B67?style=flat-square&logo=odoo&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-12-A81D33?style=flat-square&logo=debian&logoColor=white)
+![OPNsense](https://img.shields.io/badge/OPNsense-26.1.2_HA-D94F05?style=flat-square)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow?style=flat-square)
+
+
+---
+
 
 
 # 🏗️ HummerMDC — Micro Data Center (V0.1)
+
+> Infraestructura self-hosted de Alta Disponibilidad (HA) para IA (RAG/MCP), Domótica y Sistemas Críticos Empresariales (Odoo ERP). Orquestación bare-metal con cero dependencias cloud y control absoluto de datos.
+
+---
 Bienvenido al repositorio oficial del **HummerMDC**, el Micro Data Center (MDC) de producción de **Hummerfire SpA**. 
 
 Este no es un *Homelab*. Es una infraestructura crítica diseñada bajo los principios de **Economía de Guerra** (cero dependencia de la nube, hardware reciclado de alto rendimiento y soberanía absoluta de los datos) para sostener el ecosistema de **Spareware SpA** y futuras expansiones (BoxSpare, SpareTrack, Humanimals).
