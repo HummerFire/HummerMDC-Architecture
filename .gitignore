@@ -1,55 +1,131 @@
-# Prerequisites
-*.d
+# ==============================================================================
+# HUMMERMDC - .gitignore
+# Protege secretos, configuraciones de infraestructura y archivos temporales.
+# ==============================================================================
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# --- Secretos y Credenciales ---
+# Variables de entorno
+.env
+.env.*
+# Excepción: permitir subir la plantilla de ejemplo
+!.env.example
+!**/.env.example
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Claves, certificados y tokens
+*.key
+*.pem
+*.pub
+*.token
+*.p12
+*.pfx
+*.crt
 
-# Precompiled Headers
-*.gch
-*.pch
+# Archivos de secretos específicos de la infraestructura
+secrets.yaml
+secrets.yml
+secrets/
+*-secrets.yaml
+*-secrets.yml
+credentials.json
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+**/kubernetes/**/*-secrets.yaml
+charts/**/values-*-secrets.yaml
 
-# Shared objects (inc. Windows DLLs)
-*.dll
+.vault_pass
+inventory.yml
+group_vars/proxmox_cluster.yml
+host_vars/pve-*.yml
+host_vars/*/secrets.yml
+
+
+# --- IAC ---
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+*.tfvars.json
+
+# Ansible
+*.retry
+.ansible/
+
+# Talos 
+talos/rendered/
+talos/rendered-*/
+*talsecrets.yaml
+# Configuración generada de nodos
+/iac/talos/clusterconfig/
+
+omni/.env
+omni/proxmox-provider/.env
+omni/proxmox-provider/config.yaml
+
+
+# --- Container ---
+# Docker
+docker-compose.override.yml
+.dockerignore
+# Volúmenes locales de Docker
+volumes/
+
+# Kubernetes / Helm
+kubeconfig
+*.kubeconfig
+
+values-prod.yaml
+values-production.yaml
+values-*-secrets.yaml
+# Paquetes de Helm
+*.tgz
+
+
+# --- Python ---
+# Bytecode y caché
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+.venv/
+venv/
+env/
+ENV/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+.eggs/
+*.egg-info/
+.installed.cfg
+dist/
+build/
+wheels/
+pip-wheel-metadata/
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
 
-# debug information files
-*.dwo
+# --- TMP ---
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.pid
+.cache/
+
+
+# --- OS ---
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+*~
+
+# Edit
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+*.swp
+*.swo
